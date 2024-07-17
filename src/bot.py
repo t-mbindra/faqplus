@@ -175,6 +175,9 @@ async def do_nothing(tc2: TurnContext):
 @app.adaptive_cards.action_submit("expert")
 async def on_talk_to_an_expert(context: TurnContext, state: AppTurnState, data: dict):
 
+    print(context.activity)
+    print(context.activity.conversation.id)
+
     member = await TeamsInfo.get_member(context, context.activity.from_property.id)  # type: ignore
     attachment = create_talk_to_expert_card(
                     member.user_principal_name, context.activity.from_property.name, # type: ignore
@@ -199,12 +202,17 @@ async def on_talk_to_an_expert(context: TurnContext, state: AppTurnState, data: 
 @app.adaptive_cards.action_submit("chat_with_user")
 async def on_chat_with_user(context: TurnContext, state: AppTurnState, data: dict):
 
-
     attachment = create_talk_to_expert_card(data.get("user_principal_name"), data.get("user_name"),
                                              data.get("chat_items"), "In progress")
     await context.update_activity(Activity(id=context.activity.reply_to_id, 
                                            type="message", attachments=[attachment]))
-    await context.send_activity(f"{context.activity.from_property.name} is resolving the request.") # type: ignore
+    
+    if "messageid" not in context.activity.conversation.id: # type: ignore
+        custom_string = f"{context.activity.channel_data.get('channel').get('id')};messageid={context.activity.reply_to_id}"  # type: ignore
+        context.activity.conversation.id = custom_string  # type: ignore
+
+    await context.send_activity(Activity(type="message", 
+                                         text=f"{context.activity.from_property.name} is resolving the request.")) # type: ignore
 
 
 @app.adaptive_cards.action_submit("close_ticket")
@@ -213,6 +221,9 @@ async def on_close_ticket(context: TurnContext, state: AppTurnState, data: dict)
     attachment = close_request_card(data.get("user_name"),  data.get("chat_items"))  # type: ignore
     await context.update_activity(Activity(id=context.activity.reply_to_id, 
                                         type="message", attachments=[attachment]))
+    if "messageid" not in context.activity.conversation.id:   # type: ignore
+        custom_string = f"{context.activity.channel_data.get('channel').get('id')};messageid={context.activity.reply_to_id}"  # type: ignore
+        context.activity.conversation.id = custom_string  # type: ignore
     await context.send_activity(f"{context.activity.from_property.name} closed the request.") # type: ignore
 
 @app.turn_state_factory
