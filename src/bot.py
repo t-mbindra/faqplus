@@ -175,9 +175,6 @@ async def do_nothing(tc2: TurnContext):
 @app.adaptive_cards.action_submit("expert")
 async def on_talk_to_an_expert(context: TurnContext, state: AppTurnState, data: dict):
 
-    print(context.activity)
-    print(context.activity.conversation.id)
-
     member = await TeamsInfo.get_member(context, context.activity.from_property.id)  # type: ignore
     attachment = create_talk_to_expert_card(
                     member.user_principal_name, context.activity.from_property.name, # type: ignore
