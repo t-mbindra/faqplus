@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
       "resourceBaseName": {
-          "value": "TeamsAzureOpenAI-${{RESOURCE_SUFFIX}}"
+          "value": "FaqBot-${{RESOURCE_SUFFIX}}"
       },
       "botAadAppClientId": {
           "value": "${{BOT_ID}}"
@@ -15,7 +15,7 @@
           "value": "B1"
       },
       "botDisplayName": {
-          "value": "TeamsAzureOpenAI"
+          "value": "FaqBot"
       },
       "linuxFxVersion": {
         "value": "PYTHON|3.11"
