@@ -8,7 +8,7 @@ provision:
   - uses: teamsApp/create
     with:
       # Teams app name
-      name: TeamsAzureOpenAI-${{TEAMSFX_ENV}}
+      name: FaqBot-${{TEAMSFX_ENV}}
     # Write the information of created resources into environment file for
     # the specified environment variable(s).
     writeToEnvironmentFile: 
@@ -18,7 +18,7 @@ provision:
   - uses: botAadApp/create
     with:
       # The Azure Active Directory application's display name
-      name: TeamsAzureOpenAI-${{TEAMSFX_ENV}}
+      name: FaqBot-${{TEAMSFX_ENV}}
     writeToEnvironmentFile:
       # The Azure Active Directory application's client id created for bot.
       botId: BOT_ID
@@ -29,7 +29,7 @@ provision:
   - uses: botFramework/create
     with:
       botId: ${{BOT_ID}}
-      name: TeamsAzureOpenAI
+      name: FaqBot
       messagingEndpoint: ${{BOT_ENDPOINT}}/api/messages
       description: ""
       channels:
@@ -74,6 +74,3 @@ deploy:
         BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
         AZURE_OPENAI_KEY: ${{SECRET_AZURE_OPENAI_KEY}}
         AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}}
-        AZURE_SEARCH_KEY: ${{SECRET_AZURE_SEARCH_KEY}}
-        AZURE_SEARCH_ENDPOINT: ${{SECRET_AZURE_SEARCH_ENDPOINT}}
-        AZURE_SEARCH_INDEX: ${{AZURE_SEARCH_INDEX}}

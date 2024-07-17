@@ -25,15 +25,6 @@
       },
       "azureOpenAIEndpoint": {
           "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
-      },
-      "azureSearchKey": {
-          "value": "${{SECRET_AZURE_SEARCH_KEY}}"
-      },
-      "azureSearchEndpoint": {
-          "value": "${{SECRET_AZURE_SEARCH_ENDPOINT}}"
-      },
-      "azureSearchIndex": {
-          "value": "${{AZURE_SEARCH_INDEX}}"
       }
   }
 }

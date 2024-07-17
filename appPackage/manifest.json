@@ -5,8 +5,8 @@
     "id": "${{TEAMS_APP_ID}}",
     "packageName": "com.package.name",
     "name": {
-        "short": "TeamsAzureOpenAI-${{TEAMSFX_ENV}}",
-        "full": "Teams Azure OpenAI"
+        "short": "faqbot-${{TEAMSFX_ENV}}",
+        "full": "FAQ Bot"
     },
     "developer": {
         "name": "Microsoft",
@@ -16,8 +16,8 @@
         "termsOfUseUrl": "https://www.microsoft.com/legal/terms-of-use"
     },
     "description": {
-        "short": "Custom copilot to chat with your data via RAG through Azure OpenAI On Your Data",
-        "full": "Custom copilot to chat with your data via RAG (retrieval augmentation generation) through Azure OpenAI On Your Data supported data sources:  Azure AI Search, Azure Blob Storage, URL/web address, Azure Cosmos DB for MongoDB vCore, uploaded files, and Elasticsearch."
+        "short": "Custom copilot to ask queries from database of qna pairs",
+        "full": "Custom copilot to ask queries from database of qna pairs."
     },
     "icons": {
         "outline": "outline.png",

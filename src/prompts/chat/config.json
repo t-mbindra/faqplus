@@ -1,6 +1,6 @@
 {
   "schema": 1.1,
-  "description": "Chat with Teams RAG",
+  "description": "A bot that answers questions based on a database of QnA pairs.",
   "type": "completion",
   "completion": {
       "completion_type": "chat",
@@ -8,13 +8,16 @@
       "include_input": true,
       "max_input_tokens": 4096,
       "max_tokens": 1000,
-      "temperature": 0.9,
+      "temperature": 0.2,
       "top_p": 0.0,
       "presence_penalty": 0.6,
       "frequency_penalty": 0.0,
       "stop_sequences": []
   },
   "augmentation": {
-      "augmentation_type": "none"
+    "augmentation_type": "none",
+    "data_sources": {
+        "files": 2400
+    }
   }
 }

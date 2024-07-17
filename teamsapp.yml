@@ -11,7 +11,7 @@ provision:
   - uses: teamsApp/create
     with:
       # Teams app name
-      name: TeamsAzureOpenAI-${{TEAMSFX_ENV}}
+      name: FaqBot-${{TEAMSFX_ENV}}
     # Write the information of created resources into environment file for
     # the specified environment variable(s).
     writeToEnvironmentFile:
@@ -21,7 +21,7 @@ provision:
   - uses: botAadApp/create
     with:
       # The Azure Active Directory application's display name
-      name: TeamsAzureOpenAI-${{TEAMSFX_ENV}}
+      name: FaqBot-${{TEAMSFX_ENV}}
     writeToEnvironmentFile:
       # The Azure Active Directory application's client id created for bot.
       botId: BOT_ID
@@ -93,3 +93,4 @@ deploy:
       # You can replace it with your existing Azure Resource id
       # or add it to your environment variable file.
       resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
+projectId: 29a63fb9-a64b-4087-af7c-3d80c72a88bc
