@@ -93,4 +93,3 @@ deploy:
       # You can replace it with your existing Azure Resource id
       # or add it to your environment variable file.
       resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
-projectId: 29a63fb9-a64b-4087-af7c-3d80c72a88bc
