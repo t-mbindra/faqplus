@@ -35,7 +35,8 @@
 12. Deploying locally:
    Press **Ctrl+Shift+D** to open the ```Run and Debug``` menu. Press ```F5``` or click on the play button
 14. Alternatively, deploy the app to Azure:
-    Using the Teams Toolkit Extension tab, click on ```Provision``` followed by ```DEPLOY``` under ```LIFECYCLE```. Using the zip file ```appPackage/build/appPackage.dev.zip``, [sideload the app to Teams](#sideloading-the-app-to-teams)
+    Using the Teams Toolkit Extension tab, click on ```Provision``` followed by ```DEPLOY``` under ```LIFECYCLE```.
+    Using the zip file ```appPackage/build/appPackage.dev.zip``, [sideload the app to Teams](#sideloading-the-app-to-teams)
 
 ## Deploy Azure AI Resources
 1. Run```sh deploy.sh``` in the terminal. You will be prompted to login to Azure and select a subscription.
@@ -43,7 +44,10 @@
 
 ## Sideloading the app to Teams:
 1. Go to your Teams app and click on the ```Apps``` icon. Select ```Manage your apps``` followed by ```Upload an app```.
-2. Select ```Upload a custom app``` and open the relevant zip file. Click on ```Add``` when prompted. Select where you want to use the app.
+2. Select ```Upload a custom app``` and open the relevant zip file. Click on ```Add``` when prompted.
+3. Go to the channel where you want to raise requests for help. Click on the ```Apps``` icon. Select ```Got more apps``` followed by ```Manage your apps```.
+4. Click on ```Upload an app``` and open the relevant zip file.  Click on ```Add``` when prompted. Select the correct channel and click on ```Go```
+5. Select the c 
 
 >[!Note]
 > Check the status of all your local bots on [Microsoft Bot Framework](https://dev.botframework.com/bots).
