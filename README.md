@@ -36,7 +36,7 @@
    Press **Ctrl+Shift+D** to open the ```Run and Debug``` menu. Press ```F5``` or click on the play button. Also, [sideload the app to Teams Channel](#sideloading-the-app-to-teams-channel)
 14. Alternatively, deploy the app to Azure:
     Using the Teams Toolkit Extension tab, click on ```Provision``` followed by ```DEPLOY``` under ```LIFECYCLE```.
-    Using the zip file ```appPackage/build/appPackage.dev.zip``, [sideload the app to Teams](#sideloading-the-app-to-teams) and [sideload the app to Teams Channel](#sideloading-the-app-to-teams-channel)
+    Using the zip file ```appPackage/build/appPackage.dev.zip```, [sideload the app to Teams](#sideloading-the-app-to-teams) and [sideload the app to Teams Channel](#sideloading-the-app-to-teams-channel)
 
 ## Deploy Azure AI Resources
 1. Run```sh deploy.sh``` in the terminal. You will be prompted to login to Azure and select a subscription.
