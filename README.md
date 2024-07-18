@@ -9,7 +9,7 @@
 ## Setting up the app locally
 
 1. Clone the repository
-   ```git clone https://github.com/t-mbindra/chat-with-your-data.git```
+   ```git clone https://github.com/t-mbindra/faqplus.git```
 2. Install [Python 3.12](https://www.python.org/downloads/), [Node.js](https://nodejs.org/) and [Rust](https://www.rust-lang.org/tools/install).
 4. Install  [Poetry](https://python-poetry.org/docs/#installation) and [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
 5. Open the project folder in [Visual Studio Code](https://code.visualstudio.com/download).
