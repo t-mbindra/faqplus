@@ -1,6 +1,49 @@
-# FAQ Bot
+# FAQBot
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=829777713&devcontainer_path=.devcontainer%2Fdevcontainer.json&resume=1)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
+## Setting up the app locally
+
+1. Clone the repository
+   ```git clone https://github.com/t-mbindra/faqplus.git```
+2. Install [Python 3.12](https://www.python.org/downloads/), [Node.js](https://nodejs.org/) and [Rust](https://www.rust-lang.org/tools/install).
+4. Install  [Poetry](https://python-poetry.org/docs/#installation) and [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
+5. Open the project folder in [Visual Studio Code](https://code.visualstudio.com/download).
+6. Install the [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extensions.
+8. Run
+   ```poetry install```
+9. Run
+   ```poetry build```
+#### Skip to step 2 below.
+
+## Setting up the app in Github Codespaces
+
+1. Click Open in GitHub Codespaces badge above to create a codespace for the sample app. Wait for the codespace to be setup, it may take a couple of minutes.
+2. Using the Teams Toolkit extension, sign in to your Microsoft 365 account and Azure account under ```ACCOUNTS```.
+3. Deploy Azure AI resources by running ```sh deploy.sh``` in the terminal. You will be prompted to login to Azure and select a subscription.
+   
+#### To debug locally, continue to step 5, else skip to step 12.
+5. Populate the ```SECRET_AZURE_OPENAI_KEY, SECRET_AZURE_OPENAI_ENDPOINT``` variables from the [Azure portal](https://ms.portal.azure.com/) in the ```env/.env.local.user``` file
+6. Press **Ctrl+Shift+D** to open the ```Run and Debug``` menu. Select ```Debug``` and press ```F5``` or click on the play button.
+7. Download the zip file ```appPackage/build/appPackage.local.zip```.
+
+#### To deploy the app on Azure:
+8. Populate the ```SECRET_AZURE_OPENAI_KEY, SECRET_AZURE_OPENAI_ENDPOINT``` variables from the [Azure portal](https://ms.portal.azure.com/) in the ```env/.env.dev.user``` file.
+9. Using the Teams Toolkit Extension tab, click on ```Provision``` under ```LIFECYCLE```. Select relevant subscription and resource group when prompted.
+10. Using the Teams Toolkit Extension tab, click on ```Deploy``` under ```LIFECYCLE```.
+11. 7. Download the zip file ```appPackage/build/appPackage.dev.zip```.
+
+#### Sideloading the app to Teams:
+12. Go to your Teams app and click on the ```Apps``` icon. Select ```Manage your apps``` followed by ```Upload an app```.
+13. Select ```Upload a custom app``` and open the downloaded zip file. Click on ```Add``` when prompted. Select where you want to use the app.
+
+>[!Note]
+> Check the status of all your local bots on [Microsoft Bot Framework](https://dev.botframework.com/bots).
+> Check the status of all your Teams apps on [Teams Developer Portal](https://dev.teams.microsoft.com/apps).
+> Check the status of all Azure resources on [Azure Portal](https://portal.azure.com/#home) by navigating to the relevant resource group.
+
+> If you do not have permission to upload custom apps (sideloading), Teams Toolkit will recommend creating and using a Microsoft 365 Developer Program account - a free program to get your own dev environment sandbox that includes Teams.
