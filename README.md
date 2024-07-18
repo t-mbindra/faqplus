@@ -13,10 +13,10 @@
 3. Deploy [Azure AI resources](#deploy-azure-ai-resources)
 4. Deploying locally:
    Press **Ctrl+Shift+D** to open the ```Run and Debug``` menu. Select ```Debug``` and press ```F5``` or click on the play button.
-   Download the zip file ```appPackage/build/appPackage.local.zip``` and [sideload the app to Teams](#sideloading-the-app-to-teams).
+   Download the zip file ```appPackage/build/appPackage.local.zip``` and [sideload the app to Teams](#sideloading-the-app-to-teams) and  [sideload the app to Teams Channel](#sideloading-the-app-to-teams-channel)
 5. Alternatively, deploy the app to Azure:
    Using the Teams Toolkit Extension tab, click on ```Provision``` followed by ```DEPLOY``` under ```LIFECYCLE```.
-   Download the zip file ```appPackage/build/appPackage.dev.zip``` and [sideload the app to Teams](#sideloading-the-app-to-teams).
+   Download the zip file ```appPackage/build/appPackage.dev.zip``` and [sideload the app to Teams](#sideloading-the-app-to-teams) and  [sideload the app to Teams Channel](#sideloading-the-app-to-teams-channel)
 
 ## Setting up the app locally
 
@@ -33,10 +33,10 @@
 10. Deploy [Azure AI resources](#deploy-azure-ai-resources). This only needs to be done once.
 11. Using the Teams Toolkit extension, sign in to your Microsoft 365 account and Azure account under ```ACCOUNTS```.
 12. Deploying locally:
-   Press **Ctrl+Shift+D** to open the ```Run and Debug``` menu. Press ```F5``` or click on the play button
+   Press **Ctrl+Shift+D** to open the ```Run and Debug``` menu. Press ```F5``` or click on the play button. Also, [sideload the app to Teams Channel](#sideloading-the-app-to-teams-channel)
 14. Alternatively, deploy the app to Azure:
     Using the Teams Toolkit Extension tab, click on ```Provision``` followed by ```DEPLOY``` under ```LIFECYCLE```.
-    Using the zip file ```appPackage/build/appPackage.dev.zip``, [sideload the app to Teams](#sideloading-the-app-to-teams)
+    Using the zip file ```appPackage/build/appPackage.dev.zip``, [sideload the app to Teams](#sideloading-the-app-to-teams) and [sideload the app to Teams Channel](#sideloading-the-app-to-teams-channel)
 
 ## Deploy Azure AI Resources
 1. Run```sh deploy.sh``` in the terminal. You will be prompted to login to Azure and select a subscription.
@@ -45,9 +45,10 @@
 ## Sideloading the app to Teams:
 1. Go to your Teams app and click on the ```Apps``` icon. Select ```Manage your apps``` followed by ```Upload an app```.
 2. Select ```Upload a custom app``` and open the relevant zip file. Click on ```Add``` when prompted.
-3. Go to the channel where you want to raise requests for help. Click on the ```Apps``` icon. Select ```Got more apps``` followed by ```Manage your apps```.
-4. Click on ```Upload an app``` and open the relevant zip file.  Click on ```Add``` when prompted. Select the correct channel and click on ```Go```
-5. Select the c 
+
+## Sideloading the app to Teams Channel:
+1. Go to the channel where you want to raise requests for help. Click on the ```Apps``` icon. Select ```Got more apps``` followed by ```Manage your apps```.
+2. Click on ```Upload an app``` and open the relevant zip file.  Click on ```Add``` when prompted. Select the correct channel and click on ```Go```
 
 >[!Note]
 > Check the status of all your local bots on [Microsoft Bot Framework](https://dev.botframework.com/bots).
