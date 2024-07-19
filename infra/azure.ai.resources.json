@@ -34,7 +34,7 @@
         {
             "type": "Microsoft.CognitiveServices/accounts/deployments",
             "apiVersion": "2024-04-01-preview",
-            "name": "[concat(parameters('accounts_azure_openai_name'), '/gpt-35-turbo')]",
+            "name": "[concat(parameters('accounts_azure_openai_name'), '/gpt-4o')]",
             "dependsOn": [
                 "[resourceId('Microsoft.CognitiveServices/accounts', parameters('accounts_azure_openai_name'))]"
             ],
@@ -45,8 +45,8 @@
             "properties": {
                 "model": {
                     "format": "OpenAI",
-                    "name": "gpt-35-turbo",
-                    "version": "1106"
+                    "name": "gpt-4o",
+                    "version": "2024-05-13"
                 },
                 "versionUpgradeOption": "OnceCurrentVersionExpired",
                 "raiPolicyName": "Microsoft.Default"

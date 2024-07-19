@@ -45,7 +45,7 @@ if config.AZURE_OPENAI_KEY:
     model = OpenAIModel(
         AzureOpenAIModelOptions(
             api_key=config.AZURE_OPENAI_KEY,
-            default_model='gpt-35-turbo',
+            default_model='gpt-4o',
             api_version="2024-02-15-preview",
             endpoint=config.AZURE_OPENAI_ENDPOINT,
             logger=logger
@@ -55,7 +55,7 @@ else:
     model = OpenAIModel(
         AzureOpenAIModelOptions(
             azure_ad_token_provider=get_bearer_token_provider(DefaultAzureCredential(), 'https://cognitiveservices.azure.com/.default'),
-            default_model='gpt-35-turbo',
+            default_model='gpt-4o',
             api_version="2024-02-15-preview",
             endpoint=config.AZURE_OPENAI_ENDPOINT,
             logger=logger
